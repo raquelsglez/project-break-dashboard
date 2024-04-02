@@ -1,0 +1,34 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.clock {
+    background-color: #000000a2;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock div p{
+    margin: 4px;
+}
+
+.phraseDay {
+    font-size: 20px;
+}
+
+.time {
+    font-size: 50px;
+}
+
+.date {
+    font-size: 25px;
+}
