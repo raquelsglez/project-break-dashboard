@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
+   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Link list</title>
-    <link href="/styles.css" rel="stylesheet" type="text/css" /> 
-    <!-- <link href="" rel="stylesheet" type="text/css" /> -->
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Weather Station</title>
+    <link href="/styles.css" rel="stylesheet" type="text/css"/> 
+    <link href="/weather-station/styles.css" rel="stylesheet" type="text/css"/>
+   </head>
+   <body>
     <header>
-      <a href="/index.html">
-        <img src="/assets/img/icons/home.png" alt="home">
-      </a>
+        <a href="/index.html">
+            <img src="/assets/img/icons/home.png" alt="home">
+        </a>
     </header>
     <main>
-        <div>
-            <h3>Añade tu enlace de interés</h3>
-            <div>
-                <form>
-                    <input id="title-input" type="text" placeholder="Nombre del enlace">
-                    <input id="url-input" type="text"placeholder="Pega aquí la URL">
-                    <button id="link-button" type="button">Añadir enlace</button>
-                </form>
-            </div>
-            <div>
-                <ul id="ul-list"></ul>
+        <div class="weather">
+            <div class="weather-info"></div>
+            <div class="weather-forecast">
+                <ul class="list-weather-forecast"></ul>
             </div>
         </div>
     </main>
@@ -45,7 +38,7 @@
             </a>
         </nav>
     </footer>
-    <script src="/links/links.js"></script>
+    <script src="/weather-station/weather.js"></script>
     <script src="/random-background-imgs.js"></script>
   </body>
 </html>

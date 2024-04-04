@@ -8,8 +8,8 @@ const symbolChars = "!@#$%^&*()-_=+";
 const allChars = uppercaseChars + lowercaseChars + numberChars + symbolChars;
 
 function generatePassword() {
-    const lengthPasswordValue = parseInt(document.getElementById('length-password').value);
 
+    const lengthPasswordValue = parseInt(document.getElementById('length-password').value);
 
     if (lengthPasswordValue<12 || lengthPasswordValue>50){
         errorMessage.style.display = "block";
@@ -19,13 +19,12 @@ function generatePassword() {
 
     errorMessage.style.display = "none";
     let password = "";
-    
+
     password += uppercaseChars[(Math.floor(Math.random() * uppercaseChars.length))];
     password += lowercaseChars[(Math.floor(Math.random() * lowercaseChars.length))];
     password += numberChars[(Math.floor(Math.random() * numberChars.length))];
     password += symbolChars[(Math.floor(Math.random() * symbolChars.length))];
 
-    
     for(let i = password.length; i < lengthPasswordValue; i++) {
         password += allChars[(Math.floor(Math.random() * allChars.length))];
     }
