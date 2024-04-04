@@ -8,8 +8,8 @@ const images = [
 ]
 
 function updateBackground(){
-  const randomNumber = Math.floor(Math.random() * images.length);
-  const newBackground = images[randomNumber]
+  const randomNumber = Math.floor(Math.random() * images.length); //índice aleatorio del array
+  const newBackground = images[randomNumber] //ruta imagen
   document.body.style.backgroundImage = `url(${newBackground})`;
 }
 

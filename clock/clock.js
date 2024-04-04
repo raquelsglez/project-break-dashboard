@@ -6,7 +6,7 @@ const daysWeek = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes
 
 
 function updateDigitalClock() {
-    const now = new Date();
+    const now = new Date(); 
 
     let hours = now.getHours();
     let minutes = now.getMinutes();

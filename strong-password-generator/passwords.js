@@ -19,11 +19,13 @@ function generatePassword() {
 
     errorMessage.style.display = "none";
     let password = "";
+    
     password += uppercaseChars[(Math.floor(Math.random() * uppercaseChars.length))];
     password += lowercaseChars[(Math.floor(Math.random() * lowercaseChars.length))];
     password += numberChars[(Math.floor(Math.random() * numberChars.length))];
     password += symbolChars[(Math.floor(Math.random() * symbolChars.length))];
 
+    
     for(let i = password.length; i < lengthPasswordValue; i++) {
         password += allChars[(Math.floor(Math.random() * allChars.length))];
     }
