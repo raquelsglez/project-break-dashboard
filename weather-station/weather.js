@@ -2,7 +2,7 @@ const apiKey = 'eea7949f6c05453689d170638240404';
 const weatherInfo = document.querySelector('.weather-info');
 const listWeatherForecast = document.querySelector('.list-weather-forecast');
 
-const getInfoWeather = async (city) => {
+const getWeatherInfo = async (city) => {
     try {
         const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&aqi=no`);
         if(!response.ok){
@@ -16,7 +16,7 @@ const getInfoWeather = async (city) => {
     };
 };
 
-function updateInfoWeather(data) {
+function updateWeatherInfo(data) {
     let divCityWeather = document.createElement('div');
     divCityWeather.classList.add('city-weather')
 
@@ -77,7 +77,7 @@ function updateInfoWeather(data) {
 
 function weatherHours(data) {
     const forecast = data.forecast.forecastday[0].hour;
-    
+
     forecast.forEach(weatherHour =>{
         const li = document.createElement('li');
         
@@ -103,7 +103,7 @@ function weatherHours(data) {
     });
 };
 
-getInfoWeather('Alicante, Spain').then(data => {
-    updateInfoWeather(data);
+getWeatherInfo('Alicante, Spain').then(data => {
+    updateWeatherInfo(data);
     weatherHours(data);
 });

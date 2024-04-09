@@ -42,22 +42,34 @@ form div{
 } 
 
 #label-length-password {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 #length-password, #button-password{
-    padding: 8px;
+    margin: 1px;
     border: none;
     border-radius: 5px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+#length-password {
+    width: 50px;
+    height: 30px;
+}
+
 #button-password {
-    background-color: rgb(241, 171, 130);
+    width: 170px;
+    height: 33px;
+    background-color: rgb(171, 218, 221);
+    color:#564d64;
+    transition: all 1s linear;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
 }
 
 #button-password:hover {
-    background-color: rgb(252, 147, 83);
+    background-color: rgb(42, 111, 117);
+    color:#ffffff;
     transform: scale(1.05);
     transition: all 1s linear;
     cursor: pointer;

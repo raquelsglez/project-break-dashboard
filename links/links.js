@@ -33,9 +33,11 @@ linkButton.addEventListener('click', addLink);
 
 function saveLink(title, url) {
     let links = JSON.parse(localStorage.getItem('links'));
+
     if(links === null) {
         links = [];
     }
+   
     links.push({'title': title, 'url': url})
 
     localStorage.setItem('links', JSON.stringify(links));
@@ -43,6 +45,7 @@ function saveLink(title, url) {
 
 function loadLink() {
     let links = JSON.parse(localStorage.getItem('links'));
+   
     if (links === null){
         links = [];
     };
@@ -70,11 +73,13 @@ function deleteLink(li, title, url) {
     li.remove()
 
     let links = JSON.parse(localStorage.getItem('links'));
+
     if (links === null){
         links = [];
     };
 
     const savedLinks = links.filter(link => link.title !== title || link.url !== url);
+  
     localStorage.setItem('links', JSON.stringify(savedLinks));
 };
 

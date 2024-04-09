@@ -36,13 +36,13 @@ main {
 }
 
 .weather-status img {
-    width: 100px;
+    width: 65px;
     object-fit: contain;
-    margin-left: -20px;
+    margin-left: -2px;
 }
 
 .weather-status p {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .meteorology {
