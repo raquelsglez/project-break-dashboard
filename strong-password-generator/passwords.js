@@ -8,8 +8,15 @@ const symbolChars = "!@#$%^&*()-_=+";
 const allChars = uppercaseChars + lowercaseChars + numberChars + symbolChars;
 
 function generatePassword() {
-    const lengthPasswordValue = parseInt(document.getElementById('length-password').value);
+    let lengthPasswordValue = document.getElementById('length-password').value;
 
+    if (lengthPasswordValue == ''){
+        errorMessage.style.display = "block";
+        strongPassword.innerHTML = "";
+        return
+    }
+    
+    lengthPasswordValue = parseInt(lengthPasswordValue)
     if (lengthPasswordValue<12 || lengthPasswordValue>50){
         errorMessage.style.display = "block";
         strongPassword.innerHTML = "";
