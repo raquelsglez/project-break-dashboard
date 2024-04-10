@@ -1,10 +1,14 @@
 const images = [
-  "/assets/img/background/black.jpg",
-  "/assets/img/background/branch.jpg",
-  "/assets/img/background/fog.jpg",
-  "/assets/img/background/forest.jpg",
-  "/assets/img/background/rain.jpg",
-  "/assets/img/background/wood.jpg",
+  "/assets/img/background/snow-mountain.avif",
+  "/assets/img/background/beach.avif",
+  "/assets/img/background/jellyfish.avif",
+  "/assets/img/background/lake.avif",
+  "/assets/img/background/daisy.jpg",
+  "/assets/img/background/rain.avif",
+  "/assets/img/background/plant.avif",
+  "/assets/img/background/mountain.avif",
+  "/assets/img/background/fire.avif",
+  "/assets/img/background/earth.avif",
 ]
 
 function updateBackground(){
