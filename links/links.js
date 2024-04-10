@@ -23,7 +23,6 @@ function addLink(){
         croppedTitle = croppedTitle.substring(0, 10) + '...'
     }
 
-    link.innerHTML = titleInput;
     link.href = urlInput;
     link.target = "_blank";
     link.innerHTML = croppedTitle
