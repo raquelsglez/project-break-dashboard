@@ -1,6 +1,6 @@
 const strongPassword = document.getElementById('strong-password');
 const buttonPassword = document.getElementById('button-password');
-const errorMessage = document.getElementById("error-message");
+const errorMessage = document.getElementById("error-message-password");
 const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
 const numberChars = "0123456789";
@@ -18,7 +18,7 @@ function generatePassword() {
 
     errorMessage.style.display = "none";
     let password = "";
-   
+
     password += uppercaseChars[(Math.floor(Math.random() * uppercaseChars.length))];
     password += lowercaseChars[(Math.floor(Math.random() * lowercaseChars.length))];
     password += numberChars[(Math.floor(Math.random() * numberChars.length))];

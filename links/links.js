@@ -1,4 +1,4 @@
-const ulList = document.getElementById('ul-list');
+const ulList = document.getElementById('links-ul-list');
 const linkButton = document.getElementById('link-button');
 
 function addLink(){ 
@@ -73,13 +73,13 @@ function deleteLink(li, title, url) {
     li.remove()
 
     let links = JSON.parse(localStorage.getItem('links'));
-
+   
     if (links === null){
         links = [];
     };
 
     const savedLinks = links.filter(link => link.title !== title || link.url !== url);
-  
+   
     localStorage.setItem('links', JSON.stringify(savedLinks));
 };
 

@@ -3,13 +3,81 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <!--  LINK CSS <link href="./styles.css" rel="stylesheet" type="text/css" />  -->
+    <title>Dashboard</title>
+    <link href="/styles.css" rel="stylesheet" type="text/css" /> 
   </head>
-  <header>
-  </header>
   <body>
     <main>
+      <section>
+        <div class="clock">
+          <div class="phraseDay"></div>
+          <div class="time"></div>
+          <div class="date"></div>
+          <div class="phrase"></div>
+        </div>
+      </section>
+      <section>
+        <div class="div-password">
+          <h3>Crea tu contraseña segura</h3>
+          <div class="div-form">
+            <form class="form-password">
+              <label id="label-length-password" for="length-password">Longitud de la contraseña</label>
+              <div>
+                <input id="length-password" type="number" min="12" max="50" value="12">
+                <button id="button-password" type="button">Generar Contraseña</button>
+              </div>
+            </form>
+            <div id="strong-password"></div>
+            <div id="error-message-password">La longitud de la contraseña debe estar comprendida entre 12 y 50 caracteres.</div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="links-container">
+          <h3>Añade tu enlace de interés</h3>
+          <div class="links-form">
+              <form>
+                  <input id="title-input" type="text" placeholder="Nombre del enlace">
+                  <input id="url-input" type="text"placeholder="Pega aquí la URL">
+                  <button id="link-button" type="button">Añadir enlace</button>
+              </form>
+          </div>
+          <div class="links-list-div">
+              <ul id="links-ul-list"></ul>
+          </div>
+      </div>
+      </section>
+      <section>
+        <div class="weather">
+          <div class="weather-info"></div>
+          <div class="weather-forecast">
+              <ul class="list-weather-forecast"></ul>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <hr class="line">
+      <nav>
+        <a href="/clock/clock.html">
+          <img src="/assets/img/icons/clock.png" alt="clock">
+        </a>
+        <a href="/strong-password-generator/passwords.html">
+          <img src="/assets/img/icons/security-lock.png" alt="security-lock">
+        </a>
+        <a href="/links/links.html">
+          <img src="/assets/img/icons/links.png" alt="links">
+        </a>
+        <a href="/weather-station/weather.html">
+          <img src="/assets/img/icons/weather.png" alt="weather">
+        </a>
+      </nav>
+    </footer>
+    <script src="/random-background-imgs.js"></script>
+    <script src="/clock/clock.js"></script>
+    <script src="/strong-password-generator/passwords.js"></script>
+    <script src="/links/links.js"></script>
+    <script src="/weather-station/weather.js"></script>
+
   </body>
 </html>

@@ -25,7 +25,7 @@ function updateDigitalClock() {
 
     updateDate(now);
     updatePhrase(hours);
-    updatephraseDay(now.getDay());
+    updatephraseDay(now.getDay())
 }
 
 function updateDate(dateTime){

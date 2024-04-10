@@ -1,16 +1,23 @@
 html, body {
-    height: 100%;
     margin: 0;
+    min-height: 100vh;
+    height: auto;
 }
 
 body {
     transition: background-image 1s linear;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 header {
     position: fixed;
+    top: 0;
+    left: 0;
     margin: 20px;
 }
 
@@ -42,3 +49,338 @@ footer nav a img {
     height: auto;
     margin: 20px;
 }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px;
+    margin-bottom: 50px;
+}
+
+section {
+    width: 50%;
+    margin-bottom:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CLOCK */
+
+.clock {
+    background-color: #000000a2;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clock div p{
+    margin: 4px;
+}
+
+.phraseDay {
+    font-size: 20px;
+}
+
+.time {
+    font-size: 50px;
+}
+
+.date {
+    font-size: 25px;
+}
+
+/* END CLOCK */
+
+/* PASSWORD */
+
+.div-password {
+    background-color: #000000a2;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+.div-password h3 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.form-password{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-password div{
+    margin-top: 12px;
+    margin-bottom: 12px;
+} 
+
+#label-length-password {
+    font-size: 22px;
+}
+
+#length-password, #button-password{
+    margin: 1px;
+    border: none;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#length-password {
+    width: 50px;
+    height: 30px;
+}
+
+#button-password {
+    width: 170px;
+    height: 33px;
+    background-color: rgb(171, 218, 221);
+    color:#564d64;
+    transition: all 1s linear;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+}
+
+#button-password:hover {
+    background-color: rgb(42, 111, 117);
+    color:#ffffff;
+    transform: scale(1.05);
+    transition: all 1s linear;
+    cursor: pointer;
+}
+
+#strong-password{
+    font-size: 22px;
+    color: rgb(241, 221, 210);
+}
+
+#error-message-password {
+    color: red; 
+    display: none;
+    text-align: center;
+}
+
+/* END PASSWORD */
+
+/* LINKS */
+
+.links-container {
+    background-color: #000000a2;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-container h3 {
+    font-size: 30px;
+}
+
+.links-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links-form form input {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    width: 350px;
+    height: 35px;
+}
+
+.links-form button {
+    border: none;
+    border-radius: 5px;
+    margin-top: 16px;
+    background-color: rgb(171, 218, 221);
+    color:#564d64;
+    width: 180px;
+    height: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    transition: all 1s linear;
+}
+
+.links-form button:hover {
+    background-color: rgb(42, 111, 117);
+    color:#ffffff;
+    transform: scale(1.05);
+    transition: all 1s linear;
+    cursor: pointer;
+}
+
+.links-list-div {
+    width:400px;
+}
+
+.links-list-div #links-ul-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    justify-content: center;
+    padding: 0;
+    margin: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100px;
+}
+
+.links-list-div #links-ul-list li {
+    position: relative;
+    list-style: none;
+    margin: 8px;
+    background-color: #8380869f;
+    width: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.links-list-div #links-ul-list li a {
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.links-list-div #links-ul-list li button {
+    position: absolute; 
+    top: -8px; 
+    right: -6px;
+    width: 15px;
+    height: 15px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    background-color: #8380869f;
+    cursor: pointer;
+    color:#ffffff;
+}
+
+/* END LINKS */
+
+/* WEATHER */
+
+.weather{
+    background-color: #000000a2;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.city-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+}
+
+.city-weather p{
+    font-size: 20px;
+    margin: 0;
+}
+
+.weather-status {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.weather-status img {
+    width: 65px;
+    object-fit: contain;
+    margin-left: -2px;
+}
+
+.weather-status p {
+    font-size: 17px;
+}
+
+.meteorology {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+}
+
+.div-degrees {
+    display: flex;
+    align-items: center;
+}
+
+.div-degrees p {
+    font-size: 80px;
+    margin: 0;
+}
+
+.icon-degrees {
+    width: 50px;
+    object-fit: contain;
+}
+
+.conditions p {
+    font-size: 14px;
+    color: rgb(185, 177, 177);
+    margin: 0;
+}
+
+.weather-forecast{
+    display: flex;
+    justify-content: center;
+}
+
+.list-weather-forecast{
+    display: flex;
+    list-style: none;
+    width: 90%; 
+    overflow-y: auto;
+    padding: 0px;
+}
+
+.list-weather-forecast li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.list-weather-forecast li p{
+    margin: 0;
+}
+
+/* END WEATHER */
