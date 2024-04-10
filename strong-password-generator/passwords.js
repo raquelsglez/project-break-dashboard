@@ -15,7 +15,7 @@ function generatePassword() {
         strongPassword.innerHTML = "";
         return
     }
-    
+
     lengthPasswordValue = parseInt(lengthPasswordValue)
     if (lengthPasswordValue<12 || lengthPasswordValue>50){
         errorMessage.style.display = "block";
@@ -35,7 +35,21 @@ function generatePassword() {
         password += allChars[(Math.floor(Math.random() * allChars.length))];
     }
 
-   strongPassword.innerHTML = password;
+    password = shuffleString(password)
+    strongPassword.innerHTML = password;
+}
+
+function shuffleString(string) {
+    let characters = string.split("");
+    for(let i=0; i < characters.length; i++) {
+        let new_position = Math.floor(Math.random() * characters.length);
+
+        let old_character = characters[new_position]
+        characters[new_position] = characters[i]
+        characters[i] = old_character
+
+    }
+    return characters.join("");
 }
 
 buttonPassword.addEventListener('click', generatePassword);
