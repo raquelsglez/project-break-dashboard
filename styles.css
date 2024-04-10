@@ -286,6 +286,13 @@ section {
     color:#ffffff;
 }
 
+#link-error-message {
+    color: red; 
+    display: none;
+    text-align: center;
+    margin-top: 12px;
+}
+
 /* END LINKS */
 
 /* WEATHER */

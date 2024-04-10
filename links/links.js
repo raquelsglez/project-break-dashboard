@@ -1,31 +1,43 @@
 const ulList = document.getElementById('links-ul-list');
 const linkButton = document.getElementById('link-button');
+const linkErrorMessage = document.getElementById("link-error-message");
 
 function addLink(){ 
     const titleInput = document.getElementById('title-input').value;
     const urlInput = document.getElementById('url-input').value;
 
+    if(titleInput == "" || urlInput == ""){
+        linkErrorMessage.style.display = "block";
+        linkErrorMessage.innerHTML = "Debes rellenar los dos campos";
+        return
+    }
+
+    linkErrorMessage.style.display = "none";
+
     const li = document.createElement('li');
     const link = document.createElement('a');
     const deleteButton = document.createElement('button');
 
-    if(titleInput && urlInput){
-        link.innerHTML = titleInput;
-
-        link.href = urlInput;
-        link.target = "_blank";
-        link.innerHTML = titleInput;
-
-        deleteButton.innerHTML = 'x';
-
-        deleteButton.addEventListener('click' , () => deleteLink(li, titleInput, urlInput));
-
-        li.appendChild(link);
-        li.appendChild(deleteButton);
-        ulList.appendChild(li);
-    
-        saveLink(titleInput, urlInput);
+    let croppedTitle = titleInput;
+    if (croppedTitle.length > 10){
+        croppedTitle = croppedTitle.substring(0, 10) + '...'
     }
+
+    link.innerHTML = titleInput;
+    link.href = urlInput;
+    link.target = "_blank";
+    link.innerHTML = croppedTitle
+    link.title = titleInput
+
+    deleteButton.innerHTML = 'x';
+
+    deleteButton.addEventListener('click' , () => deleteLink(li, titleInput, urlInput));
+
+    li.appendChild(link);
+    li.appendChild(deleteButton);
+    ulList.appendChild(li);
+
+    saveLink(titleInput, urlInput);
 
 }
 
