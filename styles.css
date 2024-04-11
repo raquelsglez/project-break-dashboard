@@ -26,6 +26,7 @@ header a img {
     background-color: rgba(0, 0, 0, 0.432);
     padding: 6px;
     border-radius: 50%;
+    object-fit: contain;
 }
 
 footer {
@@ -54,7 +55,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0px;
+    margin: 10px;
     margin-bottom: 50px;
 }
 
@@ -123,6 +124,7 @@ section {
 .div-password h3 {
     margin-top: 20px;
     font-size: 30px;
+    text-align: center;
 }
 
 .form-password{
@@ -200,6 +202,7 @@ section {
 
 .links-container h3 {
     font-size: 30px;
+    text-align: center;
 }
 
 .links-form form {
@@ -391,3 +394,40 @@ section {
 }
 
 /* END WEATHER */
+
+
+/* Media query para dispositivos más pequeños, como tablets */
+@media only screen and (max-width: 1050px) {
+
+    header a img {
+        width: 30px;
+    }
+
+    footer nav a img {
+        width: 30px;
+        margin: 10px;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .weather, .div-password, .links-container{
+        width: 350px; 
+    }
+
+    .clock{
+        width: 750px;
+    }
+
+    .links-form form input {
+        width: 250px;
+        height: 35px;
+    }
+    
+    .links-form button {
+        width: 120px;
+    }
+
+};

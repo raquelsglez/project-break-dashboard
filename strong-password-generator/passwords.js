@@ -47,7 +47,7 @@ function shuffleString(string) {
         let newPosition = Math.floor(Math.random() * characters.length);
 
         let oldCharacter = characters[newPosition];
-        characters[new_position] = characters[i];
+        characters[newPosition] = characters[i];
         characters[i] = oldCharacter;
 
     };
