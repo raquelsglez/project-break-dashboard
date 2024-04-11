@@ -1,5 +1,5 @@
-const strongPassword = document.getElementById('strong-password');
-const buttonPassword = document.getElementById('button-password');
+const strongPassword = document.getElementById("strong-password");
+const buttonPassword = document.getElementById("button-password");
 const errorMessage = document.getElementById("error-message-password");
 const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
@@ -8,20 +8,20 @@ const symbolChars = "!@#$%^&*()-_=+";
 const allChars = uppercaseChars + lowercaseChars + numberChars + symbolChars;
 
 function generatePassword() {
-    let lengthPasswordValue = document.getElementById('length-password').value;
+    let lengthPasswordValue = document.getElementById("length-password").value;
 
-    if (lengthPasswordValue == ''){
+    if (lengthPasswordValue == ""){
         errorMessage.style.display = "block";
         strongPassword.innerHTML = "";
         return
-    }
+    };
 
-    lengthPasswordValue = parseInt(lengthPasswordValue)
+    lengthPasswordValue = parseInt(lengthPasswordValue);
     if (lengthPasswordValue<12 || lengthPasswordValue>50){
         errorMessage.style.display = "block";
         strongPassword.innerHTML = "";
-        return
-    }
+        return;
+    };
 
     errorMessage.style.display = "none";
     let password = "";
@@ -33,23 +33,25 @@ function generatePassword() {
 
     for(let i = password.length; i < lengthPasswordValue; i++) {
         password += allChars[(Math.floor(Math.random() * allChars.length))];
-    }
+    };
 
-    password = shuffleString(password)
+    password = shuffleString(password);
     strongPassword.innerHTML = password;
-}
+};
 
 function shuffleString(string) {
     let characters = string.split("");
+    
     for(let i=0; i < characters.length; i++) {
-        let new_position = Math.floor(Math.random() * characters.length);
+        
+        let newPosition = Math.floor(Math.random() * characters.length);
 
-        let old_character = characters[new_position]
-        characters[new_position] = characters[i]
-        characters[i] = old_character
+        let oldCharacter = characters[newPosition];
+        characters[new_position] = characters[i];
+        characters[i] = oldCharacter;
 
-    }
+    };
     return characters.join("");
-}
+};
 
-buttonPassword.addEventListener('click', generatePassword);
+buttonPassword.addEventListener("click", generatePassword);
