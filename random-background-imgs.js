@@ -19,3 +19,4 @@ function updateBackground(){
 
 updateBackground();
 setInterval(updateBackground, 8000);
+
