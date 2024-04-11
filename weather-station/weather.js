@@ -49,7 +49,7 @@ function updateWeatherInfo(data) {
     let iconDegrees = document.createElement("img");
     iconDegrees.classList.add("icon-degrees");
     pDegrees.innerHTML = data.current.temp_c;
-    iconDegrees.src = "/assets/img/icons/statusWeatherIcon.png";
+    iconDegrees.src = "assets/img/icons/statusWeatherIcon.png";
     iconDegrees.alt = "Degrees icon";
     divDegrees.appendChild(pDegrees);
     divDegrees.appendChild(iconDegrees);
